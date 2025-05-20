@@ -27,18 +27,15 @@ spring:
 eureka:
   instance:
     preferIpAddress: true
-    hostname: ${HOSTNAME:localhost}
 
   client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: ${EUREKA_URL:http://localhost:8079/eureka}
+    service-url:
+      defaultZone: http://eureka-service:8079/eureka
 
 management:
   endpoint:
     gateway:
-      enabled: ${ROUTE_TABLES_ENABLED:true}
+      enabled: true
   endpoints:
     web:
       exposure:
