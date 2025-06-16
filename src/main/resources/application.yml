@@ -27,8 +27,10 @@ spring:
 eureka:
   instance:
     preferIpAddress: true
-
+    hostname: localhost
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     service-url:
       defaultZone: http://eureka-service:8079/eureka
 
